@@ -1,27 +1,6 @@
-// function Player() {
-// }
-// Player.prototype.play = function(song) {
-//   this.currentlyPlayingSong = song;
-//   this.isPlaying = true;
-// };
-//
-// Player.prototype.pause = function() {
-//   this.isPlaying = false;
-// };
-//
-// Player.prototype.resume = function() {
-//   if (this.isPlaying) {
-//     throw new Error("song is already playing");
-//   }
-//
-//   this.isPlaying = true;
-// };
-//
-// Player.prototype.makeFavorite = function() {
-//   this.currentlyPlayingSong.persistFavoriteStatus(true);
-// };
 function Thermostat() {
   this.temperature = 20;
+  this.MIN_TEMP = 10;
 };
 
 Thermostat.prototype.increase = function() {
@@ -29,5 +8,12 @@ Thermostat.prototype.increase = function() {
 };
 
 Thermostat.prototype.decrease = function() {
+  if (this.isMinTemp()) {
+    return;
+  };
   this.temperature--;
+};
+
+Thermostat.prototype.isMinTemp = function() {
+  return this.temperature === this.MIN_TEMP;
 };
