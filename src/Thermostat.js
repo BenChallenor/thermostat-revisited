@@ -21,5 +21,9 @@
 //   this.currentlyPlayingSong.persistFavoriteStatus(true);
 // };
 function Thermostat() {
-  this.defaultTemp = 20;
+  this.temperature = 20;
+};
+
+Thermostat.prototype.increase = function() {
+  this.temperature ++;
 };

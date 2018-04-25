@@ -1,20 +1,4 @@
-// describe("Player", function() {
-//   var player;
-//   var song;
-//
-//   beforeEach(function() {
-//     player = new Player();
-//     song = new Song();
-//   });
-//
-//   it("should be able to play a Song", function() {
-//     player.play(song);
-//     expect(player.currentlyPlayingSong).toEqual(song);
-//
-//     //demonstrates use of custom matcher
-//     expect(player).toBePlaying(song);
-//   });
-describe("Thermostat", function(){
+describe("Thermostat", function() {
   var thermostat;
 
   beforeEach(function() {
@@ -22,7 +6,12 @@ describe("Thermostat", function(){
   });
 
   it("should start at 20 degrees", function() {
-    expect(thermostat.defaultTemp).toEqual(20);
+    expect(thermostat.temperature).toEqual(20);
+  });
+
+  it("should increase the temperarture by 1", function() {
+    thermostat.increase();
+    expect(thermostat.temperature).toEqual(21);
   });
 
 });
