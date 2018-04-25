@@ -41,6 +41,19 @@ describe("Thermostat", function() {
       thermostat.turnPowerSavingModeOn();
       expect(thermostat.isPowerSavingModeOn()).toBe(true);
     });
+
+    it("max temperature is 25 when PSM is on", function() {
+      thermostat.temperature = 25;
+      thermostat.increase();
+      expect(thermostat.temperature).toEqual(25);
+    });
+
+    it("max temperature is 32 when PSM is off", function() {
+      thermostat.turnPowerSavingModeOff();
+      thermostat.temperature = 32;
+      thermostat.increase();
+      expect(thermostat.temperature).toEqual(32);
+    })
   });
 
 

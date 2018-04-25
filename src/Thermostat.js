@@ -5,6 +5,11 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increase = function() {
+  if (this.powerSavingMode && this.temperature === 25) {
+    return;
+  } else if (this.powerSavingMode === false && this.temperature === 32) {
+    return;
+  }
   this.temperature++;
 };
 
