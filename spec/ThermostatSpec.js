@@ -14,3 +14,15 @@
 //     //demonstrates use of custom matcher
 //     expect(player).toBePlaying(song);
 //   });
+describe("Thermostat", function(){
+  var thermostat;
+
+  beforeEach(function() {
+    thermostat = new Thermostat();
+  });
+
+  it("should start at 20 degrees", function() {
+    expect(thermostat.defaultTemp).toEqual(20);
+  });
+
+});
