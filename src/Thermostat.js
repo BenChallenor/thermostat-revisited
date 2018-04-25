@@ -1,6 +1,7 @@
 function Thermostat() {
   this.temperature = 20;
   this.MIN_TEMP = 10;
+  this.powerSavingModeOn = true;
 };
 
 Thermostat.prototype.increase = function() {
@@ -16,4 +17,8 @@ Thermostat.prototype.decrease = function() {
 
 Thermostat.prototype.isMinTemp = function() {
   return this.temperature === this.MIN_TEMP;
+};
+
+Thermostat.prototype.isPowerSavingModeOn = function() {
+  return this.powerSavingModeOn === true;
 };
