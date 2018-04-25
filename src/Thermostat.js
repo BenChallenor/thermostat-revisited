@@ -25,5 +25,9 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increase = function() {
-  this.temperature ++;
+  this.temperature++;
+};
+
+Thermostat.prototype.decrease = function() {
+  this.temperature--;
 };
