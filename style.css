@@ -9,3 +9,55 @@
 .high-usage {
   color: red;
 }
+
+body {
+
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'current current current current current current'
+    'city city city city city city'
+    'on temp temp temp temp off'
+    'plus temp temp temp temp minus'
+    'reset reset reset mode mode mode';
+}
+.temp {
+  font-size: 50px;
+  grid-area: temp;
+}
+
+.mode {
+  grid-area: mode;
+}
+
+.current {
+  grid-area: current;
+}
+
+.city {
+  grid-area: city;
+}
+
+.on {
+  grid-area: on;
+}
+
+.off {
+  grid-area: off;
+}
+
+.up {
+  grid-area: plus;
+}
+
+.down {
+  grid-area: minus;
+}
+
+.reset {
+  grid-area: reset;
+}
