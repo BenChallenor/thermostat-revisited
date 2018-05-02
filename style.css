@@ -12,21 +12,37 @@
 
 body {
 
-  background-color: white;
-  color: black;
+  background-color: #ADB047;
+  color: #510d2c;
   text-align: center;
+  font-family: 'Orbitron', sans-serif;
 }
 .grid-container {
   display: grid;
   grid-template-areas:
     'current current current current current current'
     'city city city city city city'
-    'on temp temp temp temp off'
-    'plus temp temp temp temp minus'
-    'reset reset reset mode mode mode';
+    'on temp temp temp temp plus'
+    'off temp temp temp temp minus'
+    ' mode mode mode reset reset reset';
+  text-align: center;
+  font-size: 30px;
+  grid-gap: 10px;
+  padding: 10px 150px 150px 150px;
+
 }
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
 .temp {
-  font-size: 50px;
+  font-size: 120px;
   grid-area: temp;
 }
 
@@ -60,4 +76,15 @@ body {
 
 .reset {
   grid-area: reset;
+}
+
+button {
+    font-family : inherit;
+    font-size: 2em;
+    padding: 10px;
+    color: #510d2c;
+    background-color: #adaf87;
+    border-radius: 15px;
+
+
 }
